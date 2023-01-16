@@ -1,4 +1,4 @@
-// const wrapper = document.querySelector('main');
+const wrapper = document.querySelector('main');
 const loggedInText = document.querySelector('#logged-in-text');
 const loginLogoutBtn = document.querySelector('#login-logout-btn');
 
@@ -29,11 +29,13 @@ function login() {
     loggedInText.textContent = 'Logged in :)';
     loginLogoutBtn.textContent = 'Logout';
 
-
+    wrapper.classList.add("loggedin");
 }
 function logout() {
     loggedInText.textContent = 'Logged out :(';
     loginLogoutBtn.textContent = 'Login';
+    
+    wrapper.classList.remove("loggedin");
 }
 
 

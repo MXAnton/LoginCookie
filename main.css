@@ -33,6 +33,10 @@ main > div {
     gap: 0.5rem;
 }
 
+#logged-in-text {
+    color: var(--danger-color);
+}
+
 button {
     min-width: 10rem;
     padding: 1rem 2rem;
@@ -43,6 +47,15 @@ button {
 
     border: none;
     border-radius: 2rem;
+}
+
+
+.loggedin #logged-in-text {
+    color: var(--secondary-color);
+}
+.loggedin button {
+    color: var(--secondary-color);
+    background-color: var(--danger-color);
 }
 
 
