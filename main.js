@@ -60,3 +60,21 @@ function getCookie(name){
     })
     return result;
 }
+
+listenCookieChange(()=> {
+    // some cookie changed
+    setLoginLogoutState();
+}, 1000);
+function listenCookieChange(callback, interval = 1000) {
+    let lastCookie = document.cookie;
+    setInterval(()=> {
+        let cookie = document.cookie;
+        if (cookie !== lastCookie) {
+            try {
+                callback();
+            } finally {
+                lastCookie = cookie;
+            }
+        }
+    }, interval);
+}
